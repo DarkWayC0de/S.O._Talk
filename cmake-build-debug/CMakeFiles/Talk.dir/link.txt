@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Talk.dir/src/main.cpp.o CMakeFiles/Talk.dir/src/socket.cpp.o  -o Talk 
