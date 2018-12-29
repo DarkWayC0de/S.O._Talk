@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
+iostream
+-
+sys/types.h
+-
+sys/socket.h
+-
+cstring
+-
+netinet/in.h
+-
+unistd.h
+-
+arpa/inet.h
+-
+cerrno
+-
+stdexcept
+-
+
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/main.cpp
+iostream
+-
+../include/socket.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
+string
+-
+thread
+-
+
