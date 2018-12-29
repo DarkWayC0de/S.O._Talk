@@ -10,13 +10,13 @@ sockaddr_in make_ip_address(const char* ip_address, int port);
 
 
 int main() {
-    system("clear");
+    //system("clear");
     std::thread my_thead();
     try {
-        Socket A(make_ip_address("192.168.1.36", 25865));
+        Socket A(make_ip_address("192.168.1.40", 25865));
 
         sockaddr_in remote{};
-        remote = make_ip_address("192.168.1.39", 25865);
+        remote = make_ip_address("192.168.1.41", 25865);
 
         std::string quit("/quit");
         bool terminar = false;
@@ -31,11 +31,11 @@ int main() {
                 //Enviar
                 message_text.copy(message.text, sizeof(message.text) - 1, 0);
                 A.send_to(message, remote);
-                system("clear");
+                //system("clear");
                 std::cout<<"Esperando respuesta...\n";
                 //Resivir
                 A.receive_from(message, remote);
-                system("clear");
+                //system("clear");
                 //Mostrado
                 char *remote_ip = inet_ntoa(remote.sin_addr);
                 int remote_port = ntohs(remote.sin_port);
