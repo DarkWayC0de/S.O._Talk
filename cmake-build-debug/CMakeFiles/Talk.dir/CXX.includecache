@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recivir.h
+
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h
+
 /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
 iostream
 -
@@ -35,4 +39,8 @@ string
 -
 thread
 -
+../include/hilo1_recivir.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recivir.h
+../include/hilo2_enviar.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h
 

@@ -2,48 +2,35 @@
 #include "../include/socket.h"
 #include <string>
 #include <thread>
+#include "../include/hilo1_recivir.h"
+#include "../include/hilo2_enviar.h"
 
 
-
-//toca la pag 21  ojo a los semaforos
+//ojo a los semaforos
 sockaddr_in make_ip_address(const char* ip_address, int port);
 
-
 int main() {
-    //system("clear");
-    std::thread my_thead();
+
     try {
-        Socket A(make_ip_address("192.168.1.40", 25865));
-
+        //system("clear");
+        Socket A(make_ip_address("192.168.1.35", 25865));
         sockaddr_in remote{};
-        remote = make_ip_address("192.168.1.41", 25865);
+        remote = make_ip_address("192.168.1.42", 25865);
+        bool terminar=false;
 
-        std::string quit("/quit");
-        bool terminar = false;
-        do {
-            std::cout << "Escribe un mensaje para " << inet_ntoa(remote.sin_addr) << " o \"/quit\" para cerrar: ";
-            std::string message_text;
-            std::getline(std::cin, message_text);
-            if (message_text.compare(quit) == 0) {
-                terminar = true;
-            } else {
-                Message message{};
-                //Enviar
-                message_text.copy(message.text, sizeof(message.text) - 1, 0);
-                A.send_to(message, remote);
-                //system("clear");
-                std::cout<<"Esperando respuesta...\n";
-                //Resivir
-                A.receive_from(message, remote);
-                //system("clear");
-                //Mostrado
-                char *remote_ip = inet_ntoa(remote.sin_addr);
-                int remote_port = ntohs(remote.sin_port);
-                message.text[254] = '\0';
-                std::cout << "El sistema " << remote_ip << ":" << remote_port << " envio el mensaje'" << message.text
-                          << "'\n";
-            }
-        } while (!terminar);
+        std::exception_ptr eptr {};
+        std::exception_ptr eptr2 {};
+        std::thread recivir_msg(&recivir_msg_f, std::ref(A), std::ref(remote), std::ref(terminar),std::ref(eptr));
+        std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote),std::ref(terminar), std::ref(eptr));
+
+        enviar_msg.join();
+        if(eptr2){
+            std::rethrow_exception(eptr);
+        }
+        recivir_msg.join();
+        if(eptr){
+            std::rethrow_exception(eptr);
+        }
     }
     catch (std::bad_alloc& e){
         std::cerr<<"Talk : memoria insuficiente\n";
