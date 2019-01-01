@@ -6,7 +6,7 @@
 #define TALK_HILO1_RECIVIR_H
 
 
-void recivir_msg_f(Socket A, sockaddr_in remote,bool terminar,std::exception_ptr &eptr){
+void recivir_msg_f(Socket A, sockaddr_in remote,std::exception_ptr &eptr){
     try {
 
         do {
@@ -17,9 +17,9 @@ void recivir_msg_f(Socket A, sockaddr_in remote,bool terminar,std::exception_ptr
             char *remote_ip = inet_ntoa(remote.sin_addr);
             int remote_port = ntohs(remote.sin_port);
             message.text[254] = '\0';
-            std::cout << "El sistema " << remote_ip << ":" << remote_port << " envio el mensaje'" << message.text
+            std::cout << "\nEl sistema " << remote_ip << ":" << remote_port << " envio el mensaje'" << message.text
                       << "'\n";
-        }while(terminar);
+        }while(!locuron);
     }catch(...){
         eptr=std::current_exception();
     }

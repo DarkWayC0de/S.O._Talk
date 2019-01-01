@@ -5,16 +5,16 @@
 #ifndef TALK_HILO2_ENVIAR_H
 #define TALK_HILO2_ENVIAR_H
 
-void enviar_msg_f(Socket A, sockaddr_in remote, bool terminar, std::exception_ptr &eptr){
+void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
     try{
         std::string quit("/quit");
 
         do {
-            std::cout << "Escribe un mensaje para " << inet_ntoa(remote.sin_addr) << " o \"/quit\" para cerrar: ";
+            std::cout << "\nEscribe un mensaje para " << inet_ntoa(remote.sin_addr) << " o \"/quit\" para cerrar: ";
             std::string message_text;
             std::getline(std::cin, message_text);
             if (message_text.compare(quit) == 0) {
-                terminar = true;
+                locuron = true;
             } else {
                 Message message{};
                 //Enviar
@@ -22,7 +22,7 @@ void enviar_msg_f(Socket A, sockaddr_in remote, bool terminar, std::exception_pt
                 A.send_to(message, remote);
 
             }
-        } while (!terminar);
+        } while (!locuron);
 
     }catch (...){
         eptr=std::current_exception();

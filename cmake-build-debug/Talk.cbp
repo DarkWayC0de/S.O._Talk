@@ -84,10 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/Globasle&amp;Funciones.h">
+			<Option target="Talk"/>
+		</Unit>
 		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recivir.h">
 			<Option target="Talk"/>
 		</Unit>
 		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h">
+			<Option target="Talk"/>
+		</Unit>
+		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/main.h">
 			<Option target="Talk"/>
 		</Unit>
 		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h">

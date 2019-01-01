@@ -1,13 +1,4 @@
-/home/darkwayc0de/Descargas/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
+/home/darkwayc0de/Descargas/CLion-2018.3.2/clion-2018.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug

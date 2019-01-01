@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/socket.h"
+#include "../include/Globasle&Funciones.h"
 #include <string>
 #include <thread>
 #include "../include/hilo1_recivir.h"
@@ -7,21 +8,20 @@
 
 
 //ojo a los semaforos
-sockaddr_in make_ip_address(const char* ip_address, int port);
 
 int main() {
 
     try {
         //system("clear");
         Socket A(make_ip_address("192.168.1.35", 25865));
+
         sockaddr_in remote{};
         remote = make_ip_address("192.168.1.42", 25865);
-        bool terminar=false;
 
         std::exception_ptr eptr {};
         std::exception_ptr eptr2 {};
-        std::thread recivir_msg(&recivir_msg_f, std::ref(A), std::ref(remote), std::ref(terminar),std::ref(eptr));
-        std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote),std::ref(terminar), std::ref(eptr));
+        std::thread recivir_msg(&recivir_msg_f, std::ref(A), std::ref(remote), std::ref(eptr));
+        std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote), std::ref(eptr2));
 
         enviar_msg.join();
         if(eptr2){
@@ -47,18 +47,4 @@ int main() {
     return 0;
 }
 
-sockaddr_in make_ip_address(const char* ip_address, int port) {
-    sockaddr_in local_address{};
-    if(ip_address==""){
-        local_address.sin_addr.s_addr = htonl(INADDR_ANY);
-    }else{
-        inet_aton(ip_address,&local_address.sin_addr);
 
-    }
-
-    local_address.sin_family = AF_INET;
-
-    local_address.sin_port = htons(port);
-    return local_address;
-
-}
