@@ -6,11 +6,11 @@
 #define TALK_HILO1_RECIVIR_H
 
 
-void recivir_msg_f(Socket A, sockaddr_in remote,std::exception_ptr &eptr){
+void recibir_msg_f(Socket A, sockaddr_in remote,std::exception_ptr &eptr){
     try {
 
         do {
-            //Resivir
+            //Resibir
             Message message{};
             A.receive_from(message, remote);
             //Mostrado
@@ -19,7 +19,7 @@ void recivir_msg_f(Socket A, sockaddr_in remote,std::exception_ptr &eptr){
             message.text[254] = '\0';
             std::cout << "\nEl sistema " << remote_ip << ":" << remote_port << " envio el mensaje'" << message.text
                       << "'\n";
-        }while(!locuron);
+        }while(!terminar);
     }catch(...){
         eptr=std::current_exception();
     }

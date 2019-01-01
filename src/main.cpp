@@ -3,7 +3,7 @@
 #include "../include/Globasle&Funciones.h"
 #include <string>
 #include <thread>
-#include "../include/hilo1_recivir.h"
+#include "../include/hilo1_recibir.h"
 #include "../include/hilo2_enviar.h"
 
 
@@ -20,14 +20,14 @@ int main() {
 
         std::exception_ptr eptr {};
         std::exception_ptr eptr2 {};
-        std::thread recivir_msg(&recivir_msg_f, std::ref(A), std::ref(remote), std::ref(eptr));
+        std::thread recibir_msg(&recibir_msg_f, std::ref(A), std::ref(remote), std::ref(eptr));
         std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote), std::ref(eptr2));
 
         enviar_msg.join();
         if(eptr2){
             std::rethrow_exception(eptr);
         }
-        recivir_msg.join();
+        recibir_msg.join();
         if(eptr){
             std::rethrow_exception(eptr);
         }

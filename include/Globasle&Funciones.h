@@ -6,7 +6,7 @@
 #define TALK_GLOBASLE_FUNCIONES_H
 //Globales
 
-bool locuron=false;
+bool terminar=false;
 
 //Funciones
 

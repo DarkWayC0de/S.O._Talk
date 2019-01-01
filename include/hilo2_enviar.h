@@ -14,7 +14,7 @@ void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
             std::string message_text;
             std::getline(std::cin, message_text);
             if (message_text.compare(quit) == 0) {
-                locuron = true;
+                terminar= true;
             } else {
                 Message message{};
                 //Enviar
@@ -22,7 +22,7 @@ void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
                 A.send_to(message, remote);
 
             }
-        } while (!locuron);
+        } while (!terminar);
 
     }catch (...){
         eptr=std::current_exception();
