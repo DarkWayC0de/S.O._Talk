@@ -1,49 +1,58 @@
 #include <iostream>
-#include "../include/socket.h"
 #include <string>
 #include <thread>
+#include <pthread.h>
+#include <atomic>
+#include <sys/types.h>
+#include <csignal>
+#include <system_error>
+#include <chrono>
 
+#include "../include/socket.h"
+#include "../include/Globasle&Funciones.h"
+#include "../include/hilo1_recibir.h"
+#include "../include/hilo2_enviar.h"
 
-
-//toca la pag 21  ojo a los semaforos
-sockaddr_in make_ip_address(const char* ip_address, int port);
-
+//ojo a los semaforos
 
 int main() {
-    //system("clear");
-    std::thread my_thead();
+    std::signal(SIGINT,&int_signale_handler);
+    std::signal(SIGTERM,&int_signale_handler);
+    std::signal(SIGHUP,&int_signale_handler);
+    std::signal(SIGABRT,&int_signale_handler);
     try {
-        Socket A(make_ip_address("192.168.1.40", 25865));
+        //system("clear");
+        Socket A(make_ip_address("192.168.1.35", 25865));
 
         sockaddr_in remote{};
-        remote = make_ip_address("192.168.1.41", 25865);
+        remote = make_ip_address("192.168.1.42", 25865);
 
-        std::string quit("/quit");
-        bool terminar = false;
-        do {
-            std::cout << "Escribe un mensaje para " << inet_ntoa(remote.sin_addr) << " o \"/quit\" para cerrar: ";
-            std::string message_text;
-            std::getline(std::cin, message_text);
-            if (message_text.compare(quit) == 0) {
-                terminar = true;
-            } else {
-                Message message{};
-                //Enviar
-                message_text.copy(message.text, sizeof(message.text) - 1, 0);
-                A.send_to(message, remote);
-                //system("clear");
-                std::cout<<"Esperando respuesta...\n";
-                //Resivir
-                A.receive_from(message, remote);
-                //system("clear");
-                //Mostrado
-                char *remote_ip = inet_ntoa(remote.sin_addr);
-                int remote_port = ntohs(remote.sin_port);
-                message.text[254] = '\0';
-                std::cout << "El sistema " << remote_ip << ":" << remote_port << " envio el mensaje'" << message.text
-                          << "'\n";
-            }
-        } while (!terminar);
+        std::exception_ptr eptr {};
+        std::exception_ptr eptr2 {};
+        std::thread recibir_msg(&recibir_msg_f, std::ref(A), std::ref(remote), std::ref(eptr));
+        std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote), std::ref(eptr2));
+
+        while (!quit);
+        std::exception_ptr eptr3 {};
+        std::exception_ptr eptr4 {};
+        request_cancellation(recibir_msg, std::ref(eptr3));
+        request_cancellation(enviar_msg, std::ref(eptr4));
+        if(eptr3){
+            std::rethrow_exception(eptr3);
+        }
+        if(eptr4){
+            std::rethrow_exception(eptr4);
+        }
+
+        enviar_msg.join();
+        recibir_msg.join();
+        if(eptr2){
+            std::rethrow_exception(eptr2);
+        }
+        if(eptr){
+            std::rethrow_exception(eptr);
+        }
+
     }
     catch (std::bad_alloc& e){
         std::cerr<<"Talk : memoria insuficiente\n";
@@ -60,18 +69,4 @@ int main() {
     return 0;
 }
 
-sockaddr_in make_ip_address(const char* ip_address, int port) {
-    sockaddr_in local_address{};
-    if(ip_address==""){
-        local_address.sin_addr.s_addr = htonl(INADDR_ANY);
-    }else{
-        inet_aton(ip_address,&local_address.sin_addr);
 
-    }
-
-    local_address.sin_family = AF_INET;
-
-    local_address.sin_port = htons(port);
-    return local_address;
-
-}

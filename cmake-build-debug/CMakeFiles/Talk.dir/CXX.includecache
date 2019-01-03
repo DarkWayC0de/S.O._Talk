@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/Globasle&Funciones.h
+
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recibir.h
+
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h
+
 /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
 iostream
 -
@@ -29,10 +35,30 @@ stdexcept
 /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/main.cpp
 iostream
 -
-../include/socket.h
-/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
 string
 -
 thread
 -
+pthread.h
+-
+atomic
+-
+signal.h
+-
+sys/types.h
+-
+csignal
+-
+system_error
+-
+chrono
+-
+../include/socket.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
+../include/Globasle&Funciones.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/Globasle&Funciones.h
+../include/hilo1_recibir.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recibir.h
+../include/hilo2_enviar.h
+/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h
 
