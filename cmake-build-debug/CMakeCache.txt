@@ -217,11 +217,17 @@ ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
+//The directory containing a CMake configuration file for Pthreads.
+Pthreads_DIR:PATH=Pthreads_DIR-NOTFOUND
+
 //Value Computed by CMake
 Talk_BINARY_DIR:STATIC=/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug
 
 //Value Computed by CMake
 Talk_SOURCE_DIR:STATIC=/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0
+
+//The directory containing a CMake configuration file for hreads.
+hreads_DIR:PATH=hreads_DIR-NOTFOUND
 
 
 ########################

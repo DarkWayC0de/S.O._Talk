@@ -4,9 +4,9 @@
 
 #ifndef TALK_GLOBASLE_FUNCIONES_H
 #define TALK_GLOBASLE_FUNCIONES_H
-//Globales
 
-bool terminar=false;
+//Globales
+std::atomic_bool quit(false);
 
 //Funciones
 
@@ -24,6 +24,18 @@ sockaddr_in make_ip_address(const char* ip_address, int port) {
     local_address.sin_port = htons(port);
     return local_address;
 
+}
+void request_cancellation(std::thread& thread,std::exception_ptr &eptr){
+    try {
+        pthread_cancel(thread.native_handle());
+
+    }catch(...){
+        eptr=std::current_exception();
+    }
+}
+
+void int_signale_handler(int signum){
+    quit=true;
 }
 
 #endif //TALK_GLOBASLE_FUNCIONES_H
