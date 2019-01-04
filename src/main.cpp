@@ -9,6 +9,7 @@
 #include <chrono>
 #include <unistd.h>
 #include <set>
+#include <mutex>
 
 
 #include "../include/socket.h"
@@ -30,7 +31,7 @@ int main(int argc, char* argv[]) {
 
         opciones(argc,argv,help_option,server_option,port_option, ip_server,user);
         if(!help_option) {
-            //system("clear");
+            system("clear");
             if(user.empty()){
                user =getenv("USER");
             }
@@ -91,12 +92,12 @@ int main(int argc, char* argv[]) {
                 }
                 Socket A(own);
                 std::set<std::pair<std::string,std::pair<char*,int>>> destination_addresses;
-
+                std::mutex destination_addresses_mutex;
 
                 std::exception_ptr eptr{};
                 std::exception_ptr eptr2{};
-                std::thread recibir_msg(&recibir_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr));
-                std::thread enviar_msg(&enviar_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr2),std::ref(user));
+                std::thread recibir_msg(&recibir_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr),std::ref(destination_addresses_mutex));
+                std::thread enviar_msg(&enviar_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr2),std::ref(user),std::ref(destination_addresses_mutex));
 
                 while (!quit);
                 std::exception_ptr eptr3{};

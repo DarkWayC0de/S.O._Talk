@@ -15,7 +15,6 @@
 #define TALK_SOCKET_H
 
 struct Message{
-
     char text[1024];
     char user[25];
 };
