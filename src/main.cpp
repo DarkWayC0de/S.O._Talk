@@ -26,10 +26,14 @@ int main(int argc, char* argv[]) {
         bool server_option=false;
         std::string port_option;
         std::string ip_server;
+        std::string user;
 
-        opciones(argc,argv,help_option,server_option,port_option, ip_server);
+        opciones(argc,argv,help_option,server_option,port_option, ip_server,user);
         if(!help_option) {
             //system("clear");
+            if(user.empty()){
+               user =getenv("USER");
+            }
 
             if(!server_option){
                 //Cliente
@@ -53,7 +57,7 @@ int main(int argc, char* argv[]) {
                 std::exception_ptr eptr{};
                 std::exception_ptr eptr2{};
                 std::thread recibir_msg(&recibir_msg_f, std::ref(A), std::ref(server), std::ref(eptr));
-                std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(server), std::ref(eptr2));
+                std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(server), std::ref(eptr2),std::ref(user));
 
                 while (!quit);
                 std::exception_ptr eptr3{};
@@ -92,7 +96,7 @@ int main(int argc, char* argv[]) {
                 std::exception_ptr eptr{};
                 std::exception_ptr eptr2{};
                 std::thread recibir_msg(&recibir_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr));
-                std::thread enviar_msg(&enviar_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr2));
+                std::thread enviar_msg(&enviar_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr2),std::ref(user));
 
                 while (!quit);
                 std::exception_ptr eptr3{};

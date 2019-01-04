@@ -37,10 +37,10 @@ void request_cancellation(std::thread& thread,std::exception_ptr &eptr){
 void int_signale_handler(int signum){
     quit=true;
 }
-void opciones(int argc, char* argv[],bool& help_option,bool& server_option,std::string &Port_option,std::string &IP_server){
+void opciones(int argc, char* argv[],bool& help_option,bool& server_option,std::string &Port_option,std::string &IP_server, std::string &user){
     int c;
     bool cliente= false;
-    while((c=getopt(argc,argv,"hsc::p:"))!=-1||help_option){
+    while((c=getopt(argc,argv,"hsu:p:c::"))!=-1&&!help_option){
         switch (c){
             case 'h':
                 help_option=true;
@@ -65,12 +65,16 @@ void opciones(int argc, char* argv[],bool& help_option,bool& server_option,std::
             case 'p':
                 Port_option=std::string(optarg);
                 break;
+            case  'u':
+                user=std::string(optarg);
+                break;
             case '?':
-
+                help_option=true;
                 break;
             default:
                 std::fprintf(stderr,"?? getopt devolvio codigo de error 0%o ??\n",c);
                 help_option=true;
+                break;
         }
     }
 
@@ -83,9 +87,10 @@ void help(){
                "\t-c[Ip_servidor]\t\t\t\tModo cliente conectando a Ip_servidor (valor predeterminado: 10.2.1.8)\n"
                "\t-p[Puerto]\t\t\t\t\tAsignar puerto servidor (valor predeterminado: 8000)\n"
                "\t-s\t\t\t\t\t\t\tModo servidor\n"
+               "\t-u[Usuario]\t\t\t\t Iniciar con un nombre de Usuario\n"
                "\n"
                "NO SE PUEDE SELECIONAR -c y -s a la vez\n"
-               "Si no se introduce ninguna opcion inicia en modo cliente y pide ip del servidor\n";
+               "Si no se introduce ninguna opcion, se inicia en modo cliente y pide ip del servidor\n";
 }
 
 #endif //TALK_GLOBASLE_FUNCIONES_H

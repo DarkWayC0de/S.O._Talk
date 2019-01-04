@@ -5,7 +5,7 @@
 #ifndef TALK_HILO2_ENVIAR_H
 #define TALK_HILO2_ENVIAR_H
 //cliente
-void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
+void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr,std::string user){
     sigset_t set;
     sigaddset(&set,SIGINT);
     sigaddset(&set,SIGTERM);
@@ -25,7 +25,7 @@ void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
             } else {
                 Message message{};
                 //Enviar
-                std::string user =getenv("USER");
+
                 user.copy(message.user, sizeof(message.user)-1,0);
                 message_text.copy(message.text, sizeof(message.text) - 1, 0);
                 A.send_to(message, remote);
@@ -39,7 +39,7 @@ void enviar_msg_f(Socket A, sockaddr_in remote, std::exception_ptr &eptr){
     quit=true;
 }
 //server
-void enviar_msg_f2(Socket A,std::set<std::pair<std::string,std::pair<char*,int>>> &destination_addresses, std::exception_ptr &eptr){
+void enviar_msg_f2(Socket A,std::set<std::pair<std::string,std::pair<char*,int>>> &destination_addresses, std::exception_ptr &eptr,std::string user){
     sigset_t set;
     sigaddset(&set,SIGINT);
     sigaddset(&set,SIGTERM);
@@ -62,7 +62,7 @@ void enviar_msg_f2(Socket A,std::set<std::pair<std::string,std::pair<char*,int>>
                 } else {
                     Message message{};
                     //Enviar
-                    std::string user =getenv("USER");
+
                     user.copy(message.user, sizeof(message.user)-1,0);
                     message_text.copy(message.text, sizeof(message.text) - 1, 0);
                     for(std::set<std::pair<std::string,std::pair<char*,int>>>::iterator i=destination_addresses.begin();i!=destination_addresses.end();i++){

@@ -41,16 +41,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4d0d451-6418-49b8-8226-d75f46a40953" name="Default Changelist" comment="Añade funcion servidor/cliente&#10;&#10;Se añade lasfuncion servidor cliente, se crean dos nuevas &#10;funciones para el caso de servidor con sin modificaciones &#10;pertinete, pendiente de la revicion de un bug en funcion  &#10;reenviar() para esta terminado.&#10;&#10;Tambien se añadío la entra desde consola para selecionar &#10;los modos y añadir parametros">
+    <list default="true" id="b4d0d451-6418-49b8-8226-d75f46a40953" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Talk.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Talk.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Talk.dir/src/socket.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Talk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Talk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Globasle&amp;Funciones.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Globasle&amp;Funciones.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/hilo1_recibir.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/hilo1_recibir.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/hilo2_enviar.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/hilo2_enviar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/socket.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <list id="f62d9d07-db2b-418e-986b-df8a51f308c0" name="Adaptacion del codigo" comment="Adaptacion del codigo&#10;&#10;Se adapto el codigo al trabajo desde el IDE para su coorecto funcionamiento comentando los clear y cambiado a las ips correspondientes para las pruebas&#10;&#10;Signed-off-by: DarkWayC0de &lt;darkwaycodeohk@gmail.com&gt;">
@@ -68,14 +63,14 @@
     <favorites_list name="Talk" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.32374102">
+    <splitter split-orientation="horizontal" split-proportion="0.4820144">
       <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1024">
-                  <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+                <state relative-caret-position="149">
+                  <caret line="61" selection-start-line="61" selection-end-line="61" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -86,13 +81,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file:///usr/include/c++/7/thread">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="178">
+                <state relative-caret-position="1890">
                   <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/socket.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="390">
@@ -104,12 +99,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/include/Globasle&amp;Funciones.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+                <state relative-caret-position="435">
+                  <caret line="80" selection-start-line="80" selection-end-line="80" />
                 </state>
               </provider>
             </entry>
@@ -117,17 +112,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/hilo2_enviar.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+                <state relative-caret-position="404">
+                  <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/socket.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                   <folding>
                     <element signature="e#45#64#0" expanded="true" />
                   </folding>
@@ -138,7 +133,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/hilo1_recibir.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
+                <state relative-caret-position="975">
                   <caret line="65" column="107" selection-start-line="65" selection-start-column="107" selection-end-line="65" selection-end-column="107" />
                 </state>
               </provider>
@@ -173,9 +168,9 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/include/socket.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/include/hilo2_enviar.h" />
         <option value="$PROJECT_DIR$/include/hilo1_recibir.h" />
+        <option value="$PROJECT_DIR$/include/hilo2_enviar.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/Globasle&amp;Funciones.h" />
       </list>
     </option>
@@ -242,7 +237,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Talk" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-s" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Talk" TARGET_NAME="Talk" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Talk" RUN_TARGET_NAME="Talk">
+    <configuration name="Talk" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-h" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Talk" TARGET_NAME="Talk" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Talk" RUN_TARGET_NAME="Talk">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -269,6 +264,7 @@
       <workItem from="1545336625088" duration="1705000" />
       <workItem from="1546112436654" duration="3352000" />
       <workItem from="1546120864827" duration="1961000" />
+      <workItem from="1546575621552" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Adaptacion del codigo&#10;&#10;Se adapto el codigo al trabajo desde el IDE para su coorecto funcionamiento comentando los clear y cambiado a las ips correspondientes para las pruebas">
       <created>1546121590803</created>
@@ -291,11 +287,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546538800008</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Añade funcion servidor/cliente&#10;&#10;Se añade lasfuncion servidor cliente, se crean dos nuevas &#10;funciones para el caso de servidor con sin modificaciones &#10;pertinete, pendiente de la revicion de un bug en funcion  &#10;reenviar() para esta terminado.&#10;&#10;Tambien se añadío la entra desde consola para selecionar &#10;los modos y añadir parametros">
+      <created>1546574832984</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546574832984</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70594000" />
+    <option name="totallyTimeSpent" value="72912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,25 +311,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="960" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49921507" weight="0.11510792" />
       <window_info id="Structure" order="1" sideWeight="0.50078493" side_tool="true" weight="0.19756502" />
       <window_info id="Favorites" order="2" sideWeight="0.50078493" side_tool="true" weight="0.19756502" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2202166" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2202166" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39831528" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997233" weight="0.32972324" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4986165" weight="0.2635379" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4986165" weight="0.45848376" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TeamCity" order="9" sideWeight="0.4991699" weight="0.32972324" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4964029" weight="0.32851985" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4964029" weight="0.3273165" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50359714" side_tool="true" weight="0.32851985" />
       <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4991699" weight="0.32851985" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.7144438" visible="true" weight="0.322503" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.7144438" weight="0.322503" />
+      <window_info anchor="right" id="LuaJ" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -425,6 +428,11 @@
           <line>64</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Globasle&amp;Funciones.h</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -513,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/7/thread">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/x86_64-linux-gnu/sys/socket.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -527,44 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file:///usr/include/c++/7/thread">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/hilo2_enviar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/hilo1_recibir.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="65" column="107" selection-start-line="65" selection-start-column="107" selection-end-line="65" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Globasle&amp;Funciones.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/socket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1890">
+          <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -572,6 +539,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/hilo1_recibir.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="107" selection-start-line="65" selection-start-column="107" selection-end-line="65" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/hilo2_enviar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Globasle&amp;Funciones.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
