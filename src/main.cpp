@@ -7,50 +7,117 @@
 #include <csignal>
 #include <system_error>
 #include <chrono>
+#include <unistd.h>
+#include <set>
+
 
 #include "../include/socket.h"
 #include "../include/Globasle&Funciones.h"
 #include "../include/hilo1_recibir.h"
 #include "../include/hilo2_enviar.h"
 
-//ojo a los semaforos
-
-int main() {
+int main(int argc, char* argv[]) {
     std::signal(SIGINT,&int_signale_handler);
     std::signal(SIGTERM,&int_signale_handler);
     std::signal(SIGHUP,&int_signale_handler);
     std::signal(SIGABRT,&int_signale_handler);
     try {
-        //system("clear");
-        Socket A(make_ip_address("192.168.1.35", 25865));
+        bool help_option=false;
+        bool server_option=false;
+        std::string port_option;
+        std::string ip_server;
 
-        sockaddr_in remote{};
-        remote = make_ip_address("192.168.1.42", 25865);
+        opciones(argc,argv,help_option,server_option,port_option, ip_server);
+        if(!help_option) {
+            //system("clear");
 
-        std::exception_ptr eptr {};
-        std::exception_ptr eptr2 {};
-        std::thread recibir_msg(&recibir_msg_f, std::ref(A), std::ref(remote), std::ref(eptr));
-        std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(remote), std::ref(eptr2));
+            if(!server_option){
+                //Cliente
+                Socket A(make_ip_address("",8000));
+                if(ip_server.empty()){
+                    std::cout<<"Introduce la ip del servidor: ";
+                    std::getline(std::cin,ip_server);
+                    if(port_option.empty()){
+                        std::cout<<"Introduce el puerto del servidor: ";
+                        std::getline(std::cin,port_option);
+                    }
+                }
+                sockaddr_in server{};
+                if(port_option.empty()) {
+                    server = make_ip_address(ip_server.data(), 8000);
+                }else{
+                    std::string::size_type  sz;
+                    int port= std::stoi(port_option,&sz);
+                    server=make_ip_address(ip_server.data(), port);
+                }
+                std::exception_ptr eptr{};
+                std::exception_ptr eptr2{};
+                std::thread recibir_msg(&recibir_msg_f, std::ref(A), std::ref(server), std::ref(eptr));
+                std::thread enviar_msg(&enviar_msg_f, std::ref(A), std::ref(server), std::ref(eptr2));
 
-        while (!quit);
-        std::exception_ptr eptr3 {};
-        std::exception_ptr eptr4 {};
-        request_cancellation(recibir_msg, std::ref(eptr3));
-        request_cancellation(enviar_msg, std::ref(eptr4));
-        if(eptr3){
-            std::rethrow_exception(eptr3);
-        }
-        if(eptr4){
-            std::rethrow_exception(eptr4);
-        }
+                while (!quit);
+                std::exception_ptr eptr3{};
+                std::exception_ptr eptr4{};
+                request_cancellation(recibir_msg, std::ref(eptr3));
+                request_cancellation(enviar_msg, std::ref(eptr4));
+                if (eptr3) {
+                    std::rethrow_exception(eptr3);
+                }
+                if (eptr4) {
+                    std::rethrow_exception(eptr4);
+                }
 
-        enviar_msg.join();
-        recibir_msg.join();
-        if(eptr2){
-            std::rethrow_exception(eptr2);
-        }
-        if(eptr){
-            std::rethrow_exception(eptr);
+                enviar_msg.join();
+                recibir_msg.join();
+                if (eptr2) {
+                    std::rethrow_exception(eptr2);
+                }
+                if (eptr) {
+                    std::rethrow_exception(eptr);
+                }
+            }else{
+                //Server
+                sockaddr_in own{};
+                if(port_option.empty()){
+                    own=make_ip_address("",8000);
+                }else{
+                    std::string::size_type  sz;
+                    int port= std::stoi(port_option,&sz);
+                    own=make_ip_address("",port);
+                }
+                Socket A(own);
+                std::set<std::pair<std::string,std::pair<char*,int>>> destination_addresses;
+
+
+                std::exception_ptr eptr{};
+                std::exception_ptr eptr2{};
+                std::thread recibir_msg(&recibir_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr));
+                std::thread enviar_msg(&enviar_msg_f2, std::ref(A), std::ref(destination_addresses), std::ref(eptr2));
+
+                while (!quit);
+                std::exception_ptr eptr3{};
+                std::exception_ptr eptr4{};
+                request_cancellation(recibir_msg, std::ref(eptr3));
+                request_cancellation(enviar_msg, std::ref(eptr4));
+                if (eptr3) {
+                    std::rethrow_exception(eptr3);
+                }
+                if (eptr4) {
+                    std::rethrow_exception(eptr4);
+                }
+
+                enviar_msg.join();
+                recibir_msg.join();
+                if (eptr2) {
+                    std::rethrow_exception(eptr2);
+                }
+                if (eptr) {
+                    std::rethrow_exception(eptr);
+                }
+
+            }
+        }else{
+            help();
         }
 
     }

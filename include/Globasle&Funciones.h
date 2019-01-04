@@ -37,5 +37,55 @@ void request_cancellation(std::thread& thread,std::exception_ptr &eptr){
 void int_signale_handler(int signum){
     quit=true;
 }
+void opciones(int argc, char* argv[],bool& help_option,bool& server_option,std::string &Port_option,std::string &IP_server){
+    int c;
+    bool cliente= false;
+    while((c=getopt(argc,argv,"hsc::p:"))!=-1||help_option){
+        switch (c){
+            case 'h':
+                help_option=true;
+                break;
+            case 's':
+                if (cliente){
+                    std::cout<<"\nERROR Se ha introducido a la ves cliente y servidor";
+                    help_option=true;
+                }else {
+                    server_option = true;
+                }
+                break;
+            case 'c':
+                    if (server_option){
+                        std::cout<<"\nERROR Se ha introducido a la ves cliente y servidor";
+                        help_option=true;
+                    }else{
+                        IP_server=std::string(optarg);
+                        cliente=true;
+                    }
+                break;
+            case 'p':
+                Port_option=std::string(optarg);
+                break;
+            case '?':
+
+                break;
+            default:
+                std::fprintf(stderr,"?? getopt devolvio codigo de error 0%o ??\n",c);
+                help_option=true;
+        }
+    }
+
+}
+void help(){
+    std::cout<<"\n________TALK________\n"
+               "\n"
+               "Opciones:\n"
+               "\t-h\t\t\t\t\t\t\tImpresión de la ayuda (este mensaje) y cerrar\n"
+               "\t-c[Ip_servidor]\t\t\t\tModo cliente conectando a Ip_servidor (valor predeterminado: 10.2.1.8)\n"
+               "\t-p[Puerto]\t\t\t\t\tAsignar puerto servidor (valor predeterminado: 8000)\n"
+               "\t-s\t\t\t\t\t\t\tModo servidor\n"
+               "\n"
+               "NO SE PUEDE SELECIONAR -c y -s a la vez\n"
+               "Si no se introduce ninguna opcion inicia en modo cliente y pide ip del servidor\n";
+}
 
 #endif //TALK_GLOBASLE_FUNCIONES_H

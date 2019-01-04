@@ -43,8 +43,6 @@ pthread.h
 -
 atomic
 -
-signal.h
--
 sys/types.h
 -
 csignal
@@ -52,6 +50,10 @@ csignal
 system_error
 -
 chrono
+-
+unistd.h
+-
+set
 -
 ../include/socket.h
 /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h
