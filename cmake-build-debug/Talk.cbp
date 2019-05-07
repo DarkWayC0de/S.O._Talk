@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug"/>
+				<Option working_dir="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug"/>
+				<Option working_dir="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Talk">
-				<Option output="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Talk" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug"/>
+				<Option output="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Talk" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 Talk"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 Talk"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Talk/fast">
-				<Option output="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Talk" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug"/>
+				<Option output="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Talk" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,42 +67,42 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 Talk/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 Talk/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug"/>
+				<Option working_dir="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/Globasle&amp;Funciones.h">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/include/Globasle&amp;Funciones.h">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo1_recibir.h">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/include/hilo1_recibir.h">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/hilo2_enviar.h">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/include/hilo2_enviar.h">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/include/socket.h">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/include/socket.h">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/main.cpp">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/src/main.cpp">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/socket.cpp">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/src/socket.cpp">
 			<Option target="Talk"/>
 		</Unit>
-		<Unit filename="/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/CMakeLists.txt">
+		<Unit filename="/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -23,12 +23,11 @@ void recibir_msg_f(Socket A, sockaddr_in &remlote,std::exception_ptr &eptr){
 
             A.receive_from(message, remote);
             //Mostrado
-            char *remote_ip = inet_ntoa(remote.sin_addr);
-            int remote_port = ntohs(remote.sin_port);
-            message.text[254] = '\0';
+            message.text[1023] = '\0';
             message.user[24]='\0';
-            std::cout <<"\n"<<message.user<< ":" << message.text
+            std::cout <<message.user<< ":" << message.text
                       << "\n";
+            std::cout.flush();
         }while(!quit);
     }catch(std::exception){
         eptr=std::current_exception();
@@ -57,9 +56,10 @@ void recibir_msg_f2(Socket A, std::set<std::pair<std::string,std::pair<char*,int
             //Mostrado
             char *remote_ip = inet_ntoa(remote.sin_addr);
             int remote_port = ntohs(remote.sin_port);
-            message.text[254] = '\0';
+            message.text[1023] = '\0';
             std::cout << remote_ip << ":" << remote_port << "("<<message.user<<") "<< message.text
                       << "\n";
+            std::cout.flush();
             std::pair<std::string,std::pair<char*,int>> aux;
             aux.first=message.user;
             aux.second.first=remote_ip;
@@ -68,7 +68,7 @@ void recibir_msg_f2(Socket A, std::set<std::pair<std::string,std::pair<char*,int
             destination_addresses.insert(aux);
 
             sockaddr_in destino{};
-            for(std::set<std::pair<std::string,std::pair<char*,int>>>::iterator i=destination_addresses.begin();i!=destination_addresses.end();i++){
+            for(auto i=destination_addresses.begin(); destination_addresses.end() != i; i++){
                 destino=make_ip_address(i->second.first,i->second.second);
                 if(destino!=remote){
                     A.send_to(message,destino);

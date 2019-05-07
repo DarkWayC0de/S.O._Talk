@@ -40,7 +40,7 @@ void int_signale_handler(int signum){
 void opciones(int argc, char* argv[],bool& help_option,bool& server_option,std::string &Port_option,std::string &IP_server, std::string &user){
     int c;
     bool cliente= false;
-    while((c=getopt(argc,argv,"hsu:p:c::"))!=-1&&!help_option){
+    while((c=getopt(argc,argv,"hsu:p:c:"))!=-1&&!help_option){
         switch (c){
             case 'h':
                 help_option=true;

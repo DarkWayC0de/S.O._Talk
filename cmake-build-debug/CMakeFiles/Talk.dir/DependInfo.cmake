@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/main.cpp" "/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/CMakeFiles/Talk.dir/src/main.cpp.o"
-  "/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/src/socket.cpp" "/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/CMakeFiles/Talk.dir/src/socket.cpp.o"
+  "/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/src/main.cpp" "/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/CMakeFiles/Talk.dir/src/main.cpp.o"
+  "/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/src/socket.cpp" "/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/CMakeFiles/Talk.dir/src/socket.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

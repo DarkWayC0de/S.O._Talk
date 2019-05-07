@@ -1,3 +1,3 @@
-/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/CMakeFiles/Talk.dir
-/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/CMakeFiles/Talk.dir
+/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/CMakeFiles/edit_cache.dir

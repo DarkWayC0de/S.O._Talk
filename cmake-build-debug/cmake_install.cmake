@@ -1,4 +1,4 @@
-# Install script for directory: /home/darkwayc0de/Escritorio/S.O./Talk_v.3.0
+# Install script for directory: /home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/darkwayc0de/Escritorio/S.O./Talk_v.3.0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/darkwaycode/Escritorio/ULL/S.O/Talk/Talk_v.6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

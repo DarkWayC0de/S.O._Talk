@@ -31,14 +31,14 @@ int main(int argc, char* argv[]) {
 
         opciones(argc,argv,help_option,server_option,port_option, ip_server,user);
         if(!help_option) {
-            system("clear");
+            //system("clear");
             if(user.empty()){
                user =getenv("USER");
             }
 
             if(!server_option){
                 //Cliente
-                Socket A(make_ip_address("",8000));
+                Socket A(make_ip_address("",0));
                 if(ip_server.empty()){
                     std::cout<<"Introduce la ip del servidor: ";
                     std::getline(std::cin,ip_server);
